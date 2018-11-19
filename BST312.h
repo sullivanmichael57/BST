@@ -326,7 +326,9 @@ template<class ItemType>
 int BST_312 <ItemType>::countNodes(TreeNode* t) const
 {
     int count = 1;
-
+    if (t == NULL){
+        return 0;
+    }
     if (t->left != NULL){
         count+=countNodes(t->left);
     }
